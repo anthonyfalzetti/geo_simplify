@@ -7,16 +7,11 @@ defmodule GeoNif do
 
   @doc """
   When the NIF is loaded, it will override this function.
-  Apply the Ramer–Douglas–Peucker algorithm to a list to find the optimal subset
-  of records for graphing.
 
-  Inputs:
-  - Records (a list of two element tuples)
-  - Precision (a float)
+  Inputs: None
 
-  Output:
-  - A list of indexes
+  Output: A list of indexes
   """
 
-  def simplify(_records, _precision), do: :erlang.nif_error(:nif_not_loaded)
+  def simplify(), do: :erlang.nif_error(:nif_not_loaded)
 end
